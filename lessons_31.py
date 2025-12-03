@@ -1,4 +1,5 @@
 """1․ Գրել MyList class, որը կունենա գրեթե բոլոր այն մեթոդները և ֆունկցիոնալությունը, որը ունի list class-ը առանց ժառանգելու։"""
+from click import clear
 from jsonschema.validators import extend
 
 
@@ -28,6 +29,9 @@ class MyList:
     def extend(self,*args,**kwargs):
         return self.l.extend(*args,**kwargs)
 
+    def clear(self):
+        return self.l.clear()
+
     def __str__(self):
         return str(self.l)
 
@@ -41,4 +45,7 @@ print(l1.reverse())
 print(l1.pop())
 l1.extend("list")
 print(l1)
+l1.clear()
+print(l1)
+
 
